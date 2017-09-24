@@ -22,4 +22,10 @@ class SolutionTest {
         int[] input = {5};
         assertEquals(5, s.maxSubArray(input));
     }
+
+    @Test
+    void ExampleArrayInput() {
+        int[] input = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        assertEquals(6, s.maxSubArray(input));
+    }
 }
