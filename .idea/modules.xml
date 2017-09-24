@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" filepath="$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCodeJava.iml" filepath="$PROJECT_DIR$/LeetCodeJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaximalSubarray/MaximalSubarray.iml" filepath="$PROJECT_DIR$/MaximalSubarray/MaximalSubarray.iml" />
       <module fileurl="file://$PROJECT_DIR$/removeDuplicatesFromSortedArray/removeDuplicatesFromSortedArray.iml" filepath="$PROJECT_DIR$/removeDuplicatesFromSortedArray/removeDuplicatesFromSortedArray.iml" />
     </modules>
   </component>
