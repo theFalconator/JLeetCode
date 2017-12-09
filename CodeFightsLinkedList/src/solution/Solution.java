@@ -27,9 +27,44 @@ public final class Solution {
         return head;
     }
 
-    public static boolean isListPalindrome(ListNode<Integer> l) {
-        String original = l.toString();
-        String reversed = reverse(l).toString();
-        return original.equals(reversed);
+    public static boolean compareLists(ListNode<Integer> a, ListNode<Integer> b) {
+        while(a != null && b != null) {
+            if(a.value.equals(b.value)) {
+                a = a.next;
+                b = b.next;
+            }
+            else { return false; }
+        }
+
+        if (a==null && b==null) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean isListPalindrome(ListNode<Integer> head) {
+        ListNode<Integer> slow = head;
+        ListNode<Integer> fast = head;
+        ListNode<Integer> slowPrev = null;
+
+
+        if(head != null && head.next!=null) {
+            while(fast != null && fast.next != null) {
+                fast = fast.next;
+                slowPrev = slow;
+                slow = slow.next;
+            }
+        }
+
+        ListNode<Integer> mid = null;
+        if(fast != null) {
+            mid = slow;
+            slow=slow.next;
+        }
+
+        ListNode<Integer> secondHalf = slow;
+        slowPrev.next = null;
+
+        return false;
     }
 }

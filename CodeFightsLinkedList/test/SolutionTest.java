@@ -59,4 +59,17 @@ public class SolutionTest {
     public void testReverse() {
         ListNode<Integer> l = buildFromIntArray(new int[] {0,1,2,3,4});
     }
+
+    @Test
+    public void testCompare() {
+        ListNode<Integer> a = buildFromIntArray(new int[] {0,1,2});
+        ListNode<Integer> b = buildFromIntArray(new int[] {1,2,3});
+
+        assertFalse(compareLists(a,b));
+
+        ListNode<Integer> c = buildFromIntArray(new int[] {4,5,6});
+        ListNode<Integer> d = c;
+
+        assertTrue(compareLists(c,d));
+    }
 }
