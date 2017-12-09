@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" filepath="$PROJECT_DIR$/ClimbingStairs/ClimbingStairs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodeFightsLinkedList/CodeFightsLinkedList.iml" filepath="$PROJECT_DIR$/CodeFightsLinkedList/CodeFightsLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExcelColumns/ExcelColumns.iml" filepath="$PROJECT_DIR$/ExcelColumns/ExcelColumns.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCodeJava.iml" filepath="$PROJECT_DIR$/LeetCodeJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaximalSubarray/MaximalSubarray.iml" filepath="$PROJECT_DIR$/MaximalSubarray/MaximalSubarray.iml" />
       <module fileurl="file://$PROJECT_DIR$/removeDuplicatesFromSortedArray/removeDuplicatesFromSortedArray.iml" filepath="$PROJECT_DIR$/removeDuplicatesFromSortedArray/removeDuplicatesFromSortedArray.iml" />
