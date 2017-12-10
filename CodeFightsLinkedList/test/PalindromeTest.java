@@ -2,9 +2,9 @@ import org.junit.Test;
 import solution.ListNode;
 
 import static org.junit.Assert.*;
-import static solution.Solution.*;
+import static solution.Palindrome.*;
 
-public class SolutionTest {
+public class PalindromeTest {
 
     @Test
     public void singleElement() {

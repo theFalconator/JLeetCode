@@ -1,6 +1,6 @@
 package solution;
 
-public final class Solution {
+public final class Palindrome {
 
     public static ListNode<Integer> buildFromIntArray(int[] arr) {
         ListNode<Integer> head = new ListNode<>(arr[0]);
