@@ -59,9 +59,20 @@ public final class Solution {
             }
         }
 
-        System.out.println(head.toString());
-        System.out.println(slow.toString());
+        // only two elements in list
+        if(fast == null && slow != null && slow.next == null) {
+            return slow.value == head.value;
+        }
 
-        return false;
+        /*
+        Even amount of elements in list will have:
+            fast pointer pointing to null after walking
+            slow pointer != null
+        Odd amount of elements in list will have:
+            fast pointer at last element in list
+            slow pointer != null and slow pointer at mid
+         */
+
+        return compareLists(reverse(slow), head);
     }
 }
