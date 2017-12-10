@@ -1,8 +1,8 @@
 import org.junit.Test;
-import solution.ListNode;
+import palindrome.ListNode;
 
 import static org.junit.Assert.*;
-import static solution.Palindrome.*;
+import static palindrome.Palindrome.*;
 
 public class PalindromeTest {
 

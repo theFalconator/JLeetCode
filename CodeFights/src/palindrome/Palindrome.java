@@ -1,21 +1,21 @@
-package solution;
+package palindrome;
 
 public final class Palindrome {
 
-    public static ListNode<Integer> buildFromIntArray(int[] arr) {
-        ListNode<Integer> head = new ListNode<>(arr[0]);
-        ListNode<Integer> cursor = head;
+    public static palindrome.ListNode<Integer> buildFromIntArray(int[] arr) {
+        palindrome.ListNode<Integer> head = new palindrome.ListNode<>(arr[0]);
+        palindrome.ListNode<Integer> cursor = head;
         for (int i = 1; i < arr.length; i++) {
-            cursor.next = new ListNode<>(arr[i]);
+            cursor.next = new palindrome.ListNode<>(arr[i]);
             cursor = cursor.next;
         }
         return head;
     }
 
-    public static ListNode<Integer> reverse(ListNode<Integer> head) {
-        ListNode<Integer> prev = null;
-        ListNode<Integer> cursor = head;
-        ListNode<Integer> nextNode = null;
+    public static palindrome.ListNode<Integer> reverse(palindrome.ListNode<Integer> head) {
+        palindrome.ListNode<Integer> prev = null;
+        palindrome.ListNode<Integer> cursor = head;
+        palindrome.ListNode<Integer> nextNode = null;
 
         while (cursor != null) {
             nextNode = cursor.next;
@@ -27,7 +27,7 @@ public final class Palindrome {
         return head;
     }
 
-    public static boolean compareLists(ListNode<Integer> a, ListNode<Integer> b) {
+    public static boolean compareLists(palindrome.ListNode<Integer> a, palindrome.ListNode<Integer> b) {
         while(a != null) {
             if(a.value != b.value)
                 return false;
@@ -39,10 +39,10 @@ public final class Palindrome {
         return true;
     }
 
-    public static boolean isListPalindrome(ListNode<Integer> head) {
-        ListNode<Integer> slow = head;
-        ListNode<Integer> fast = head;
-        ListNode<Integer> slowPrev = null;
+    public static boolean isListPalindrome(palindrome.ListNode<Integer> head) {
+        palindrome.ListNode<Integer> slow = head;
+        palindrome.ListNode<Integer> fast = head;
+        palindrome.ListNode<Integer> slowPrev = null;
 
         // Edge case where there is only one element in the list
         if (head.next == null) {

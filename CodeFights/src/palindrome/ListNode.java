@@ -1,4 +1,6 @@
-package solution;
+package palindrome;
+
+import java.util.Objects;
 
 public class ListNode<T> {
   public ListNode(T x) {
@@ -20,4 +22,5 @@ public class ListNode<T> {
       result += "]";
       return result;
   }
+
 }
