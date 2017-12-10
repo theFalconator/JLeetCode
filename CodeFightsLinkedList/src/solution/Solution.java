@@ -36,10 +36,7 @@ public final class Solution {
             else { return false; }
         }
 
-        if (a==null && b==null) {
-            return true;
-        }
-        return false;
+        return a == null && b == null;
     }
 
     public static boolean isListPalindrome(ListNode<Integer> head) {
@@ -49,7 +46,7 @@ public final class Solution {
 
 
         if(head != null && head.next!=null) {
-            while(fast != null && fast.next != null) {
+            while(fast.next != null) {
                 fast = fast.next;
                 slowPrev = slow;
                 slow = slow.next;
