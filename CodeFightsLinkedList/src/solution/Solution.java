@@ -5,7 +5,7 @@ public final class Solution {
     public static ListNode<Integer> buildFromIntArray(int[] arr) {
         ListNode<Integer> head = new ListNode<>(arr[0]);
         ListNode<Integer> cursor = head;
-        for(int i = 1; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             cursor.next = new ListNode<>(arr[i]);
             cursor = cursor.next;
         }
@@ -17,7 +17,7 @@ public final class Solution {
         ListNode<Integer> cursor = head;
         ListNode<Integer> nextNode = null;
 
-        while(cursor != null) {
+        while (cursor != null) {
             nextNode = cursor.next;
             cursor.next = prev;
             prev = cursor;
@@ -28,12 +28,13 @@ public final class Solution {
     }
 
     public static boolean compareLists(ListNode<Integer> a, ListNode<Integer> b) {
-        while(a != null && b != null) {
-            if(a.value.equals(b.value)) {
+        while (a != null && b != null) {
+            if (a.value.equals(b.value)) {
                 a = a.next;
                 b = b.next;
+            } else {
+                return false;
             }
-            else { return false; }
         }
 
         return a == null && b == null;
@@ -44,23 +45,22 @@ public final class Solution {
         ListNode<Integer> fast = head;
         ListNode<Integer> slowPrev = null;
 
+        // Edge case where there is only one element in the list
+        if (head.next == null) {
+            return true;
+        }
 
-        if(head != null && head.next!=null) {
-            while(fast.next != null) {
-                fast = fast.next;
+        // Find the middle of the list by walking the two pointers
+        if (head != null && head.next != null) {
+            while (fast != null && fast.next != null) {
+                fast = fast.next.next;
                 slowPrev = slow;
                 slow = slow.next;
             }
         }
 
-        ListNode<Integer> mid = null;
-        if(fast != null) {
-            mid = slow;
-            slow=slow.next;
-        }
-
-        ListNode<Integer> secondHalf = slow;
-        slowPrev.next = null;
+        System.out.println(head.toString());
+        System.out.println(slow.toString());
 
         return false;
     }

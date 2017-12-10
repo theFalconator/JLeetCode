@@ -7,35 +7,27 @@ import static solution.Solution.*;
 public class SolutionTest {
 
     @Test
-    public void singleElementShouldReturnTrue() {
-        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1})));
+    public void singleElement() {
+        assertTrue("Any single element should return true", isListPalindrome(buildFromIntArray(new int[]{1})));
     }
 
     @Test
-    public void twoOfTheSameShouldReturnTrue() {
+    public void listOfTwo() {
         assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 1})));
         assertTrue(isListPalindrome(buildFromIntArray(new int[]{0, 0})));
-    }
-
-    @Test
-    public void listOfTwoDifferentElementsShouldReturnFalse() {
         assertFalse(isListPalindrome(buildFromIntArray(new int[]{1, 2})));
         assertFalse(isListPalindrome(buildFromIntArray(new int[]{3, 4})));
     }
 
     @Test
-    public void listOfThreeShouldReturnTrueIfFirstEqualsLast() {
-        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 1})));
-        assertTrue(isListPalindrome(buildFromIntArray(new int[]{0, 100, 0})));
+    public void listOfThree() {
+
+        assertTrue("First element same as last should return true.", isListPalindrome(buildFromIntArray(new int[]{1, 2, 1})));
+        assertFalse("Should return false when first != last", isListPalindrome(buildFromIntArray(new int[]{1, 2, 3})));
     }
 
     @Test
-    public void listofThreeShouldReturnFalse() {
-        assertFalse(isListPalindrome(buildFromIntArray(new int[]{1, 2, 3})));
-    }
-
-    @Test
-    public void listOfNShouldBeTrueIfReverseIsSameAsOriginal() {
+    public void nElementsPalindrome() {
         assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 1})));
         assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 1, 2, 1})));
         assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 3, 4, 5, 4, 3, 2, 1})));
@@ -81,7 +73,6 @@ public class SolutionTest {
         ListNode<Integer> h = buildFromIntArray(new int[]{1, 2, 3});
 
         assertFalse("Different lengths cannot return true.", compareLists(g, h));
-
 
     }
 }
