@@ -28,16 +28,15 @@ public final class Solution {
     }
 
     public static boolean compareLists(ListNode<Integer> a, ListNode<Integer> b) {
-        while (a != null && b != null) {
-            if (a.value.equals(b.value)) {
-                a = a.next;
-                b = b.next;
-            } else {
+        while(a != null) {
+            if(a.value != b.value)
                 return false;
-            }
+            a = a.next;
+            if(b.next == null)
+                return false;
+            b = b.next;
         }
-
-        return a == null && b == null;
+        return true;
     }
 
     public static boolean isListPalindrome(ListNode<Integer> head) {
@@ -72,6 +71,10 @@ public final class Solution {
             fast pointer at last element in list
             slow pointer != null and slow pointer at mid
          */
+
+        //
+        System.out.println("Head: " + head);
+        System.out.println("Slow: " + slow);
 
         return compareLists(reverse(slow), head);
     }

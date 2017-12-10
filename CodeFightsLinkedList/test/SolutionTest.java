@@ -23,14 +23,18 @@ public class SolutionTest {
     public void listOfThree() {
 
         assertTrue("First element same as last should return true.", isListPalindrome(buildFromIntArray(new int[]{1, 2, 1})));
+        assertTrue(isListPalindrome(buildFromIntArray(new int[] {3,3,3})));
         assertFalse("Should return false when first != last", isListPalindrome(buildFromIntArray(new int[]{1, 2, 3})));
     }
 
     @Test
     public void nElementsPalindrome() {
         assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 1})));
-        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 1, 2, 1})));
-        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 3, 4, 5, 4, 3, 2, 1})));
+//        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 1, 2, 1})));
+//        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 2, 3, 4, 5, 4, 3, 2, 1})));
+//
+//        assertTrue(isListPalindrome(buildFromIntArray(new int[]{1, 1000000000, -1000000000, -1000000000, 1000000000, 1})));
+//        assertFalse(isListPalindrome(buildFromIntArray(new int[]{1, 2, 3, 4, 5})));
     }
 
     @Test
@@ -54,25 +58,11 @@ public class SolutionTest {
 
     @Test
     public void testCompare() {
-        ListNode<Integer> a = buildFromIntArray(new int[]{0, 1, 2});
-        ListNode<Integer> b = buildFromIntArray(new int[]{1, 2, 3});
+        ListNode<Integer> a = buildFromIntArray(new int[]{1, 2, 1});
+        ListNode<Integer> b = buildFromIntArray(new int[]{1, 2});
 
         assertFalse("Offset by one should return false", compareLists(a, b));
-
-        ListNode<Integer> c = buildFromIntArray(new int[]{4, 5, 6});
-        ListNode<Integer> d = c;
-
-        assertTrue("Identity should return true.", compareLists(c, d));
-
-        ListNode<Integer> e = buildFromIntArray(new int[]{1, 2, 3});
-        ListNode<Integer> f = buildFromIntArray(new int[]{1, 2});
-
-        assertFalse("Different lengths cannot return true.", compareLists(e, f));
-
-        ListNode<Integer> g = buildFromIntArray(new int[]{1, 2});
-        ListNode<Integer> h = buildFromIntArray(new int[]{1, 2, 3});
-
-        assertFalse("Different lengths cannot return true.", compareLists(g, h));
-
+        assertTrue(compareLists(buildFromIntArray(new int[] {1,2,3,4,5}),
+                buildFromIntArray(new int[] {1,2,3,4,5})));
     }
 }
