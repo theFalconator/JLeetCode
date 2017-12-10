@@ -59,7 +59,7 @@ public final class Solution {
             }
         }
 
-        // only two elements in list
+       //  only two elements in list
         if(fast == null && slow != null && slow.next == null) {
             return slow.value == head.value;
         }
