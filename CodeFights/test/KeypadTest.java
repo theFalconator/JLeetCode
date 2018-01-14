@@ -49,6 +49,20 @@ public class KeypadTest {
     }
 
     @Test
+    public void digits() {
+        assertEquals(1, presses("1"));
+        assertEquals(4, presses("2"));
+        assertEquals(4, presses("3"));
+        assertEquals(4, presses("4"));
+        assertEquals(4, presses("5"));
+        assertEquals(4, presses("6"));
+        assertEquals(5, presses("7"));
+        assertEquals(4, presses("8"));
+        assertEquals(5, presses("9"));
+        assertEquals(2, presses("0"));
+    }
+
+    @Test
     public void singleWords() {
         assertEquals(9, presses("LOL"));
     }
@@ -56,5 +70,10 @@ public class KeypadTest {
     @Test
     public void shortSentence() {
         assertEquals(13, presses("HOW R U"));
+    }
+
+    @Test
+    public void nullInput() {
+        assertEquals(0, presses(null));
     }
 }

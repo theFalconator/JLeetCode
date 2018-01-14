@@ -39,13 +39,28 @@ public class Keypad {
 
         keys.put('S', 4);
         keys.put('Z', 4);
+
+        keys.put('1', 1);
+        keys.put('2', 4);
+        keys.put('3', 4);
+        keys.put('4', 4);
+        keys.put('5', 4);
+        keys.put('6', 4);
+        keys.put('7', 5);
+        keys.put('8', 4);
+        keys.put('9', 5);
+        keys.put('0', 2);
     }
 
     public static int presses(String phrase) {
+        if (phrase == null)
+            return 0;
+
         BuildKeys();
         int sum = 0;
         for (Character c : phrase.toCharArray()) {
-            if(keys.containsKey(c))
+
+            if(keys.containsKey(Character.toUpperCase(c)))
                 sum += keys.get(c);
 
         }
