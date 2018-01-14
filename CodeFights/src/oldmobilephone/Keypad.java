@@ -50,6 +50,9 @@ public class Keypad {
         keys.put('8', 4);
         keys.put('9', 5);
         keys.put('0', 2);
+
+        keys.put('*', 1);
+        keys.put('#', 1);
     }
 
     public static int presses(String phrase) {
